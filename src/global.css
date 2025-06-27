@@ -1,0 +1,19 @@
+html, #root {
+    height: 100%;
+    margin: 0;
+    z-index: 5;
+  }
+
+  body::before {
+    content: 'fixed';
+    position: fixed;
+    inset: 0;
+    background-image: url('./assets/background/overlay.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+  }
+
