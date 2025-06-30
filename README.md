@@ -15,12 +15,15 @@ TODO: Guide users through getting your code up and running on their own system. 
 
 ```
 # Install dependencies
-npm install
+Frontend dependencies + Backend dependencies
+cd src/client and cd ../server
+&& npm install.
 ```
 
 ```
 # Run the development with (starts server and client on specified localhost ports):
 npm run
+
 ```
 
 # Testing
@@ -33,19 +36,36 @@ Test Structure:
 
 - cypress/e2e/ui/ – contains UI tests (e.g. dashboard table rendering)
 
+## ✨ Features
+
+# Core Architecture
+
+- **Backend**: Node.js server with Express & TypeScript
+- **Frontend**: React/TS built with Vite
+- **Real-time Communication**: Socket.IO integration
+- **Kanban board**: Powered by @hello-pangea/dnd
+
 # Chat Functionality
 
 This project includes real-time chat functionality implemented with Socket.IO. Users can interact with the chat by passing query parameters to specify the user identity when accessing the application:
 
-Access the chat as Admin:
+Thats b/w user1(Admin) and user2(JaneDoe) :
 
-```http://localhost:3000/?user=1```
+To start chat: Open in separate browser tabs/windows of Your Favourite Browser:
 
-Access the chat as default user Jane Doe:
+The port number where your local server is running since we are running a frontend project on Vite thats default 5173
 
-```http://localhost:3000/?user=2```
+```
+#Access the chat as Admin:
+
+`http://localhost:5173/chatapp/?user=1`
+
+#Access the chat as default user Jane Doe:
+
+`http://localhost:5173/chatapp/?user=2`
 
 The user ID parameter sets the chat identity, ensuring messages are correctly routed and displayed according to the user identity specified.
+```
 
 # Kanban Functionality
 
